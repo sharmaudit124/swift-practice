@@ -9,7 +9,7 @@ arr.insert("Test", at: 2);
 print(arr);
 
 arr.remove(at: 2);
-print(arr);
+print(arr.sorted());
 
 //iterate
 for (index,fruit) in arr.enumerated(){
@@ -56,3 +56,9 @@ for (key , value) in map{
 }
 
 // we can traverse through simply map.key and map.value
+
+if let val = map[3] {
+    print("The value is \(val)")
+}else{
+    print("Value does not exist")
+}
