@@ -38,7 +38,7 @@ print("X is \(point.x) and Y is \(point.y)")
 
 // Enumeration Mutation
 
-eenum TriStateSwitch {
+enum TriStateSwitch {
     case off, low, high
 
     mutating func change() {
@@ -76,3 +76,12 @@ struct Level{
 
 Level.updateHeight(2.5)
 
+//when defining a method, you can provide both an external parameter name
+// (used when calling the method) and an internal parameter name (used within the method).
+func methodName(externalName internalName: ParameterType) -> ReturnType {
+    // Method implementation
+}
+
+func greet(to name: String) -> String {
+    return "Hello, \(name)!"
+}

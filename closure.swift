@@ -1,5 +1,5 @@
 import Foundation;
-
+// closure assigned as a variable
 var myClosure: (Int) -> Void = { number in
     print("Number is \(number)")
 }
@@ -12,12 +12,18 @@ let add: (Int, Int) -> Int = { (val1 , val2) in
 
 add(2,4)
 
-func performOperation(_ a: Int, _ b: Int, operation: (Int, Int) -> Int) -> Int {
+
+//------------------------------Closure passed as parameter-----------------------------------------------------
+
+
+func performOperation(_ a: Int, _ b: Int, operation: ((Int, Int) -> Int)) -> Int {
     return operation(a, b)
 }
  
 // Using the closure as a parameter
-let product = performOperation(4, 2, operation: { $0 * $1 })
+let product = performOperation(4, 2, operation:{ (x,y) in 
+    return x * y;
+})
 print("Product: \(product)")
 
 // simple syntax
@@ -112,4 +118,26 @@ myClosFunc(add :{(val1,val2) in
 
 //Trailing closure syntax
 //when closure is the last parameter of function we call it like this
+
+//-----------------------Non Escaping closures---------------
+
+var str = "Udit SHarma"
+
+func nonEscFunc(param: ()->()){
+    print("Func started")
+    param()
+    print("Func ended")
+}
+
+nonEscFunc(param: {
+    print("Func")
+})
+
+//ABove all are non escaping closures
+
+//------ESCAPING CLOSURES-------------
+
+// escaping closure is one which is passed as param in func which is called after function returns
+
+
 
