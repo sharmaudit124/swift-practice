@@ -31,9 +31,3 @@ sleep(3)
 
 print("After sleeping")
 
-
-// var myReturnCompletionHandler: (String) -> String = { name in
-//     return name + " Sharma"
-// }
-
-// func getCompleteName(param: @escaping (String))
