@@ -142,3 +142,6 @@ array[double: 3] = 10
 print(array.arr)
 
 
+//---------Why stored properties are not used in EXTENSIONS-------------
+
+

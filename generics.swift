@@ -41,3 +41,27 @@ extension Stack {
         return items.isEmpty ? nil : items[items.count - 1]
     }
 }
+
+
+//---------------------Arrays defining------------
+
+var arr = Array<Int>() // empty array of integer
+arr.append(254)
+arr.append(14)
+print(arr)
+
+var dict = Dictionary<String, String>()
+
+dict["Udit"]="Sharma"
+dict["Ram"]="Sharma"
+
+print(dict)
+
+//--------------------Associated Types------------------------
+
+protocol Stackable{
+    associatedtype Item
+
+    func push(item:Item)
+    func pop() -> Item
+}
